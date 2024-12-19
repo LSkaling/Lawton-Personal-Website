@@ -1,4 +1,4 @@
-baseURL: "https://hugo-profile.netlify.app"
+baseURL: "http://www.lawtonskaling.com"
 languageCode: "en-us"
 title: "Lawton Skaling"
 theme: hugo-profile
