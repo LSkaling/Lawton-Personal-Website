@@ -1,0 +1,10 @@
+<div class="gallery">
+    {{ range .Params.images }}
+    <figure>
+        <a href="{{ .src }}">
+            <img src="{{ .thumb }}" alt="{{ .alt }}">
+        </a>
+        <figcaption>{{ .caption }}</figcaption>
+    </figure>
+    {{ end }}
+</div>

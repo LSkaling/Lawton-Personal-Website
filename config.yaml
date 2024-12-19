@@ -1,0 +1,558 @@
+baseURL: "https://hugo-profile.netlify.app"
+languageCode: "en-us"
+title: "Lawton Skaling"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+Paginate: 3
+enableRobotsTXT: true
+# disqusShortname: your-disqus-shortname
+# googleAnalytics: G-MEASUREMENT_ID
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+# Menus:
+#   main:
+    # - identifier: blog
+    #   name: Blog
+    #   title: Blog posts
+    #   url: /blogs
+    #   weight: 1
+    # - identifier: gallery
+    #   name: Gallery
+    #   title: Blog posts
+    #   url: /gallery
+    #   weight: 2
+    #Dropdown menu
+    # - identifier: dropdown
+    #   title: Example dropdown menu
+    #   name: Dropdown
+    #   weight: 3
+    # - identifier: dropdown1
+    #   title: example dropdown 1
+    #   name: example 1
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 1
+    # - identifier: dropdown2
+    #   title: example dropdown 2
+    #   name: example 2
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 2
+
+params:
+  title: "Lawton Skaling"
+  description: "Lawton's personal site"
+  # staticPath: ""  # The path to serve the static files from
+  favicon: /favicon.png
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: false
+
+  # If you want to load dynamically responsive images from Cloudinary
+  # This requires your images to be uploaded + hosted on Cloudinary
+  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+  # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+
+  # Whether to add mathjax support on all pages. Alternatively, you can opt-in per page by adding `mathjax: true` in the frontmatter.
+  mathjax: false
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    # disableThemeToggle: true
+    # defaultTheme: "light" # dark
+
+  font:
+    fontSize: 1rem # default: 1rem
+    fontWeight: 400 # default: 400
+    lineHeight: 1.5 # default: 1.5
+    textAlign: left # default: left
+
+  # color preference
+  # When using hex codes for colors, quotations must be used along with the # sign
+  # color:
+  #   textColor: "#343a40"
+  #   secondaryTextColor: "#6c757d"
+  #   textLinkColor: "#007bff"
+  #   backgroundColor: "#eaedf0"
+  #   secondaryBackgroundColor: "#64ffda1a"
+  #   primaryColor: "#007bff"
+  #   secondaryColor: "#f8f9fa"
+
+  #   darkmode:
+  #     textColor: "#e4e6eb"
+  #     secondaryTextColor: "#b0b3b8"
+  #     textLinkColor: "#ffffff"
+  #     backgroundColor: "#18191a"
+  #     secondaryBackgroundColor: "#212529"
+  #     primaryColor: "#ffffff"
+  #     secondaryColor: "#212529"
+
+  # If you want to customize the menu, you can change it here
+  navbar:
+    align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+    showBrandLogo: false # Show brand logo in nav bar | default is true
+    #brandName: "Hugo Profile" # Brand name for the brand | default is the title variable
+    disableSearch: true
+    # searchPlaceholder: "Search"
+    stickyNavBar:
+      enable : true
+      showOnScrollUp : false
+    enableSeparator: false
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: true
+      disableContact: false
+
+  # Hero
+  hero:
+    enable: true
+    intro: "Hi, my name is"
+    title: "Lawton."
+    subtitle: "I like to make things"
+    content: "I'm a student at Stanford University studying mechanical engineering. I enjoy tinkering in my free time, and document my projects here!"
+    image: /images/pfp.jpeg
+    bottomImage:
+      enable: true
+    # roundImage: true # Make hero image circular | default false
+    button:
+      enable: true
+      name: "Resume"
+      url: "/Lawton Skaling Resume.pdf"
+      download: false
+      newPage: true
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-x-twitter
+          url: https://twitter.com/LawtonSkaling  
+        - icon: fab fa-youtube
+          url: https://www.youtube.com/@lskaling
+        - icon: fab fa-github
+          url: https://github.com/LSkaling
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/lskaling     
+
+  # projects
+  projects:
+    enable: true
+    #title: "Projects and Side Quests"
+    items:
+      - title: Stanford Robosub
+        content: An underwater robotics project competing in the 2025 RoboSub Competition.
+        image: /images/robosub_2.jpg
+        featured:
+          name: Learn more
+          link: https://www.stanfordrobosub.org
+        links:
+          - icon: fa fa-envelope
+            url: mailto:stanfordrobosub@gmail.com?subject=Stanford%20Robosub%20Inquiry
+          - icon: fa fa-globe
+            url: https://www.stanfordrobosub.org         
+          - icon: fab fa-twitter
+            url: https://x.com/StanfordAUV
+          - icon: fa fa-cube
+            url: https://a360.co/4fpnYOX
+
+      - title: Rocket Flight Computer
+        content: A versatile rocket controller with a focus on reliability and high resolution data collection.
+        image: /images/flight_computer.jpeg
+        # featured:
+        #   name: Read more
+        #   link: https://django-converter.herokuapp.com
+        links:
+          - icon: fab fa-github
+            url: https://github.com/LSkaling/Project-Daedalus-Flight-Software       
+
+      - title: Hoover Tower Rocket
+        content: A 5 ft tall FDM 3D printed rocket modeled after Stanford's iconic building.
+        image: /images/hoover_tower.jpeg
+        featured:
+          name: Read More
+          link: https://lskaling.notion.site/Hoover-Tower-Rocket-1612b435e02d80a2b2def40f34098eab?pvs=4
+        links:
+          - icon: fa fa-cube
+            url: https://a360.co/3ZGIXH3
+          - icon: fab fa-youtube
+            url: https://www.youtube.com/watch?v=yED582QqiEc     
+          - icon: fas fa-book
+            url: https://github.com/gurusabarish/HugoProfileV2                 
+
+      - title: Project Daedalus
+        content: Developing a rocket that will bellyflop like Starship
+        image: /images/daedalus.png
+        featured:
+          name: Read More
+          link: https://lskaling.notion.site/Project-Daedalus-1612b435e02d8073ab83fa19ab25b4cd?pvs=4
+
+      - title: Motorized Couch
+        content: Stanford’s viral motorized couch
+        image: /images/couch.png
+        featured:
+          name: Read More
+          link: https://lskaling.notion.site/Motorized-Couch-1612b435e02d80098cb8e483ce677930?pvs=4
+        links:
+          - icon: fab fa-youtube
+            url: https://youtu.be/-JlS9xX32jU?si=rdwC1WKUfwzt0fiL   
+          - icon: fas fa-book
+            url: https://stanforddaily.com/2023/04/16/meet-stanford-moonshot-club-the-ones-behind-the-viral-motorized-couch/
+
+      - title: Dorm Kichen Access Lock
+        content: Engineering solutions to problems in my dorm
+        image: /images/toyon_door.png
+        featured:
+          name: Read More
+          link: https://lskaling.notion.site/Dorm-Kitchen-Access-Lock-1612b435e02d80c6b801e2ef505e5601?pvs=4
+        links:
+          - icon: fa fa-cube
+            url: https://a360.co/4fHyIsy
+          - icon: fab fa-github
+            url: https://github.com/LSkaling/Toyon-Kitchenette-Unlock
+
+      - title: Motorized Bike
+        content: Improving my ride around campus
+        image: /images/motorized_bike.png
+        featured:
+          name: Read More
+          link: https://lskaling.notion.site/Motorized-Bike-1612b435e02d805b9d49db23275b5f85?pvs=4
+        links:
+          - icon: fa fa-cube
+            url: https://a360.co/3BEF79x
+
+      - title: Fingerprint Scanner Door Lock
+        content: A dorm door lock using biometrics, so I never lock myself out
+        image: /images/door_opener_alpha.png
+        featured:
+          name: Read More
+          link: https://lskaling.notion.site/Fingerprint-Scanner-1612b435e02d80bab165d60406a5891e?pvs=4
+        links:
+          - icon: fa fa-cube
+            url: https://a360.co/40OO6iw
+
+      - title: Design, Build, Fly
+        content: Stanford Flight Club’s Annual Competition
+        image: /images/dbf_plane.webp
+        featured:
+          name: Read More
+          link: https://lskaling.notion.site/Design-Build-Fly-1612b435e02d8062b969e6092fdd4e0d?pvs=4
+
+      - title: Giant Cardboard Airplane
+        content: The largest cardboard airplane on the internet
+        image: /images/cardboard_plane.png
+        featured:
+          name: Read More
+          link: https://lskaling.notion.site/Cardboard-Airplane-1612b435e02d80b8b882d8b67100f5d1?pvs=4
+        links:
+          - icon: fa fa-cube
+            url: https://a360.co/3DnqHet
+          - icon: fab fa-youtube
+            url: https://www.youtube.com/watch?v=ZFsPNsgbl4M              
+
+      - title: Jack in the Box
+        content: A fully 3D printed Jack in the Box, featuring a 3D scan of Jack!
+        image: /images/jack_in_box.png
+        featured:
+          name: Read More
+          link: https://lskaling.notion.site/Jack-in-the-Box-1612b435e02d801088daf4a6b023d5fe?pvs=4
+        links:
+          - icon: fa fa-cube
+            url: https://a360.co/49HTS8b
+
+      - title: Monitor Stand
+        content: A monitor stand with built in charging, weightless screen adjustment, and a sleek design
+        image: /images/monitor_stand.png
+        featured:
+          name: Read More
+          link: https://lskaling.notion.site/Monitor-Stand-1612b435e02d8013973fda120e621f80?pvs=4
+        links:
+          - icon: fa fa-cube
+            url: https://a360.co/3DnV4kY
+
+      - title: Mechanical Laser Projector
+        content: Laser projector using two cams to create an image without electronics. Fabricated on a 3 axis CNC.
+        image: /images/laser_projector.png
+        featured:
+          name: Read More
+          link: https://lskaling.notion.site/Mechanical-Laser-Projector-1612b435e02d8054bfeed86d12e05d8b?pvs=4                             
+     
+
+
+  # About
+  # about:
+  #   enable: false
+  #   title: "About Me"
+  #   image: "/images/me.png"
+  #   content: |-
+  #     I am a software developer with a passion for web development. I have a background in computer science and mathematics, and I have a strong interest in the intersection of technology and art. I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA.
+
+  #     I am currently working on a project that will be used to help people find the best way to get around the city.
+  #   skills:
+  #     enable: true
+  #     title: "Here are a few technologies I've been working with recently:"
+  #     items:
+  #       - "HTML"
+  #       - "CSS"
+  #       - "JavaScript"
+  #       - "React"
+  #       - "Node"
+  #       - "Express"
+
+
+  # Experience
+  experience:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - job: "Mechanical Engineering Intern"
+        company: "Astranis"
+        companyUrl: "https://www.astranis.com"
+        date: "June 2024 - September 2024"
+        featuredLink:
+          enable: false
+          name: "View the project"
+          url: "https://example.com"
+        info:
+          enable: false          
+        content: |
+          I was matched with Astranis through the [Matthew Isakowitz Fellowship](http://matthewisakowitzfellowship.org). I contributed to development of the block 2 vehicle and future Omega program. Specifically, I:
+          - Designed an electric propulsion thrust stand
+          - Developed tests to recreate a deployment failure
+          - Developed better motor testing infrastructure
+          - Worked interdisciplinarily with electrical engineering to design an electronics enclosure for radiation shielding
+
+      - job: "Mechanical Engineering Intern"
+        company: "Joby Aviation"
+        companyUrl: "https://www.jobyaviation.com"
+        date: "June 2023 - September 2023"
+        featuredLink:
+          enable: false
+          url: "https://example.com"
+        info:
+          enable: false
+        content: |
+          I worked on the Joby Battery Mechanical team developing high specific energy batteries for aviation. I:
+          - Reduced weight and improved strength of battery terminals
+          - Designed a test fixture to simulate battery expansion during the end of life
+          - Developed a test to simulate high temperature breakdown of dielectric materials during thermal runaway
+          - Created an automated system for measuring thermal resistance of contact materials
+
+
+      - job: "Hardware Engineering Intern"
+        company: "Argo AI"
+        companyUrl: "https://web.archive.org/web/20220610033453/https://www.argo.ai/"
+        date: "June 2022 - Aug 2022"
+        info:
+          enable: false
+        featuredLink:
+          enable: false
+          url: "https://example.com"
+        content: |
+          I worked on the hardware team at Argo, where I helped to test and characterize sensors for autonomous vehicles. I:
+          - Design an enclosure for testing cameras without light interference
+          - Designed an automated system for testing and calibrating LIDAR sensors
+          - Redesigned lidar calibration targets for different materials
+
+      - job: "Operations Manager"
+        company: "SSI"
+        companyUrl: "https://www.stanfordssi.org/leadership"
+        date: "April 2023 - April 2024"
+        info:
+          enable: false
+        content: |
+          I led the Stanford Student Space Initiative's operations team. During the role, I:
+
+          - Hosted a roadtrip over thanksgiving to tour aerospace companies around California
+          - Coordinated SSI social events
+          - Helped managed the SSI budget and finances
+          - Developed better workspace organization and safety practices
+          - Built Slack bots to track workspace cleaning, member attrition, and card access
+
+      - job: "Mechanical Team Lead"
+        company: "StanfordAUV"
+        companyUrl: "https://www.stanfordrobosub.org"
+        date: "Jan 2024 - Present"
+        info:
+          enable: false
+        featuredLink:
+          enable: false
+          url: "https://example.com"
+        content: |
+          I helped start the Stanford Autonomous Underwater Vehicle team, and have led the mechanical team through the design and build of two vehicle. I:  
+          - Conducted trade studies on vehicle design
+          - Developed size, buoyancy, and financial budgets      
+          - Taught new members Fusion 360 and design for manufacturing
+          - Designed and built the electronics enclosure
+
+      - job: "President"
+        company: "Stanford Flight Club"
+        companyUrl: "https://flightclub.sites.stanford.edu"
+        date: "June 2022 - June 2023"
+        info:
+          enable: false
+        featuredLink:
+          enable: false
+          url: "https://example.com"
+        content: |
+          I led the Stanford Flight Club through a year of growth and competition. I:
+          - Brought back the Design, Build, Fly competition team
+          - Recruited new members through events and greater campus presence
+          - Developed project grants for funding student projects
+
+      - job: "Co-Founder"
+        company: "Moonshot"
+        companyUrl: "https://www.stanfordmoonshot.club"
+        date: "September 2022 - Present"
+        info:
+          enable: false
+        featuredLink:
+          enable: false
+          url: "https://example.com"
+        content: |
+          I helped to create the Stanford Moonshot Club, a student organization dedicated to helping students develop and execute their own projects. I:
+          - Ran a workshop on 3D modeling
+          - Hosted build events
+          - Connected interested students to campus resources, funding opportunities, and mentors
+          - Contributed to projects including the motorized couch, lake lag raft, and kids jeep
+
+  # Education
+  education:
+    enable: false
+    # title: "Custom Name"
+    index: false
+    items:
+      - title: "Master of Business Administration"
+        school:
+          name: "University of California, Berkeley"
+          url: "https://example.org"
+        date: "2013 - 2015"
+        GPA: "3.8 out of 5.0"
+        content: |-
+          Extracurricular Activities
+            - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
+      - title: "Bachelor of Science in Computer Science"
+        school:
+          name: "Massachusetts Institute of Technology"
+          url: "https://example.org"
+        date: "2009 - 2013"
+        GPA: "3.9 out of 5.0"
+        content: |-
+          I Publiced two papers in the ACM SIGCHI Conference on Artificial Intelligence.
+          - [Fast and Accurate Object Detection with a Single Convolutional Neural Network](https://example.com)
+          - Face mask detection using a single convolutional neural network.
+
+          Extracurricular Activities
+            - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
+        featuredLink:
+          enable: true
+          name: "My academic record"
+          url: "https://example.com"
+      - title: "High School"
+        school:
+          name: "Thomas Jefferson High School for Science and Technology."
+          url: "https://example.org"
+        GPA: "4.2 out of 5.0"
+        featuredLink:
+          enable: true
+          url: "https://example.com"
+
+  # Achievements
+  achievements:
+    enable: false
+    # title: "Custom Name"
+    items:
+      - title: Google kickstart runner
+        content: I solved all problems with optimal solution.
+        url: https://example.com
+        image: /images/achievment.jpg
+      - title: Facebook Hackathon Winner
+        content: Developed a product using Artificial Intelligence.
+        image: /images/achievment.jpg
+      - title: Hugo Profile
+        content: Developed a theme and getting 1K+ downloads per month.
+        url: "https://github.com/gurusabarish/hugo-profile"
+        image: /images/achievment.jpg
+      - title: Microsoft Imagine Runner
+        content: We are developed a product which can help others.
+      - title: Google Summer of Code
+        content: Contributed to a open source project.
+        url: https://example.com
+
+
+  #Contact
+  contact:
+    enable: true
+    # title: "Custom Name"
+    content: Reach out to me! I'm always looking for new opportunities and connections. Emails to this address will be forwarded to my inbox.
+    btnName: Email me
+    btnLink: mailto:whopper-feature.5w@icloud.com
+    # formspree:
+    #   enable: true # `contact.email` value will be ignored
+    #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
+    #   emailCaption: "Enter your email address"
+    #   messageCaption: "Enter your message here"
+    #   messageRows: 5
+
+  footer:
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Recent Posts
+      enable: false
+      disableFeaturedImage: false
+    socialNetworks:
+      github: https://github.com
+      linkedin: https://linkedin.com
+      twitter: https://twitter.com
+      youtube: https://www.youtube.com/@lskaling
+
+  # List pages like blogs and posts
+  listPages:
+    disableFeaturedImage: false
+
+  # Single pages like blog and post
+  singlePages:
+    socialShare: true
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+    tags:
+      openInNewTab: true
+
+  # For translations
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    pageNotFound: "Page not found"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"
+
+  #customScripts: -| # You can add custom scripts which will be added before </body> tag
+  #  <script type="text/javascript"><!-- any script here --></script>
