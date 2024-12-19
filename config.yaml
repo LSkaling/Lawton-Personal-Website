@@ -1,4 +1,4 @@
-baseURL: "http://www.lawtonskaling.com"
+baseURL: "https://www.lawtonskaling.com"
 languageCode: "en-us"
 title: "Lawton Skaling"
 theme: hugo-profile
@@ -15,7 +15,7 @@ outputs:
 Paginate: 3
 enableRobotsTXT: true
 # disqusShortname: your-disqus-shortname
-# googleAnalytics: G-MEASUREMENT_ID
+#googleAnalytics: "{{ getenv `GOOGLE_ANALYTICS_ID` }}"
 
 markup:
   goldmark:
@@ -131,7 +131,7 @@ params:
     title: "Lawton."
     subtitle: "I like to make things"
     content: "I'm a student at Stanford University studying mechanical engineering. I enjoy tinkering in my free time, and document my projects here!"
-    image: /images/pfp.jpeg
+    image: /images/pfp2.png
     bottomImage:
       enable: true
     # roundImage: true # Make hero image circular | default false
